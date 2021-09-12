@@ -1,0 +1,10 @@
+Difference between EM and REM?
+em - relative to the font size of its direct or nearest parent.
+rem - relative only to the html(root) font size.
+
+Where to use EM?
+Em is preferably used in margins and paddings.
+
+Why you shouldn't set font-sizes using EM?
+EM takes into consideration the font sizes of all its parents.
+Compounding font size creates problem in handling font sizes throughout a webpage.
