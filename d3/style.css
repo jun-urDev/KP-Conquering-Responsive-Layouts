@@ -23,11 +23,13 @@ body {
   font-family: sans-serif;
 }
 
+/* placed some of the properties into intro-content div  */
 .container {
   background: #23424a;
   color: white;
 }
 
+/* added properties for new more-content div  */
 .more-content {
   margin: 0 auto;
   padding: 0 2rem;
@@ -35,6 +37,7 @@ body {
   max-width: 750px;
 }
 
+/* properties are placed here so container can have 100% background without affecting the content  */
 .intro-content {
   margin: 0 auto;
   width: 50%;
