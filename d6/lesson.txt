@@ -1,0 +1,7 @@
+Topics Tackled:
+1) Using percentage for widths
+2) Avoiding to set heights
+3) Using max-widths
+
+Why you shouldn't use EM?
+EM's Compounding nature - inheriting and multiplying font size from all of its parents.
