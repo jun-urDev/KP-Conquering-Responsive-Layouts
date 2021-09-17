@@ -1,0 +1,11 @@
+*, ::before, ::after {box-sizing: border-box}
+
+OR
+
+html {box-sizing: border-box} 
+*, ::before, ::after {box-sizing: border-box}
+
+
+- it make sure that the content, padding and borders fit the specified size of a container.
+- it includes border size to the inside of container instead of outside.
+- it makes organizing easier by making sizes predictable. 

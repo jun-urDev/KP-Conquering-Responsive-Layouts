@@ -1,0 +1,17 @@
+Block Element Modifier (BEM) naming convention
+-makes it easier to know where and which something belongs to.
+
+<div class="card card--light">
+    <img class="card__image" src="url" alt=name>
+    <h2 class="card__title>Text</h2>
+    <p class="card__body>Text</p>
+</div>
+
+where:
+card = Block
+card__image = Element of the block
+card--light = Modifier of the block
+
+so,
+Double Underscore (__) - used for naming element inside a block, child of the block
+Double Hyphen (--) - used for naming something that modifies the block
