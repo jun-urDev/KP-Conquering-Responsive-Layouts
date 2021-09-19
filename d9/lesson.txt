@@ -1,0 +1,15 @@
+Reduce HTML markups
+    - place multiple classes in a single div if no conflicts.
+    - have meaningful class name to easily know its effect.
+
+Adding Image
+    - include alt text
+    - wrap inside a div to avoid getting distorted from parent properties.
+
+align-self: property; // allows default alignment to be overriden for individual flex items
+justify-content: property; // defines alignment along the main axis. Distributes leftover space
+    - dictates the layout of flex items in a container.
+
+Ensure Responsive Image
+    - add max-width: 100%; to .img selector
+    - avoids overflow or side-scrolling in small screen sizes
