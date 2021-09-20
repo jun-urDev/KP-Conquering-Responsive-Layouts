@@ -1,0 +1,18 @@
+Flexbox items
+    flex-grow: number;
+        It defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
+
+    flex-shrink: number;
+        It specifies the “flex shrink factor” which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn’t enough space on the row.
+
+    flex-basis: number; // ideal width like max-width but shrinks if needed
+        It specifies the initial size of the flex item, before any available space is distributed according to the flex factors. When omitted from the flex shorthand, its specified value is the length zero.
+
+    flex: number number number; // shorthand for flex-grow, shrink and basis.
+        It takes flex-grow, flex-shrink and flex-basis respectively.
+
+    align-self: property; // same as align items property but only works on itself. breaks default properties
+
+    order: number;
+        0 - (default) natural place in order
+        -1 - to place ahead of 0
