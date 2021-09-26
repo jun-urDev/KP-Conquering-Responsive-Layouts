@@ -1,0 +1,11 @@
+Breakpoints
+    - is the “point” at which a website's content and design will adapt in a certain way in order to provide the best possible user experience.
+
+When to use breakpoints?
+    - play with dev tools 'responsive mode' and see when your layout breaks. (1-3 breakpoints are enough)
+
+Common breakpoints:
+    600px - phones
+    900px - tablets
+    1200px - desktops
+    1800px - big monitors
