@@ -124,6 +124,7 @@ header {
   visibility: hidden;
   height: 0;
   position: absolute;
+  font-size: 1rem;
 }
 
 .nav--visible {
@@ -133,6 +134,8 @@ header {
 }
 
 .nav__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-transform: uppercase;
 }
@@ -140,8 +143,24 @@ header {
 .nav__item,
 a:link,
 a:visited {
+  margin-top: 0.75em;
   text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  opacity: 0.5;
+}
+
+.nav__link {
   color: #fff;
+}
+
+.nav__link--button {
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 100px;
+  color: #23424a;
 }
 
 .logo {
@@ -182,6 +201,17 @@ a:visited {
     visibility: visible;
     display: flex;
     height: auto;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__item {
+    margin: 0 0.5em;
   }
 
   .row {
