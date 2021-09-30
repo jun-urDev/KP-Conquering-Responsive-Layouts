@@ -1,0 +1,245 @@
+Recap:
+    - websites are responsive before we write CSS
+    - when there are layout issues, we are at fault
+    - usually the culprit is desktop approach
+    - mastering anything is not aboout learning as much as you possibly can
+    - flexbox basics (Day 8 & 10)
+
+Day 2:
+    Difference between EM and REM?
+        em - relative to the font size of its direct or nearest parent.
+        rem - relative only to the html(root) font size.
+
+    Where to use EM?
+        Em is preferably used in margins and paddings.
+
+    Why you shouldn't set font-sizes using EM?
+        EM takes into consideration the font sizes of all its parents.
+        ompounding font size creates problem in handling font sizes throughout a webpage.
+
+Day 4:
+    Viewport Units
+        -can also be used for font sizes but can pose problems of typography being too big/small in certain screen sizes.
+
+        1) Viewport Height (vh) - This unit is based on the height of the viewport. A value of 1vh is equal to 1% of the viewport height.
+        2) Viewport Width (vw) - This unit is based on the width of the viewport. A value of 1vw is equal to 1% of the viewport width.
+        3) Viewport Minimum (vmin) - This unit is based on the smaller dimension of the viewport. If the viewport height is smaller than the width, the value of 1vmin will be equal to 1% of the viewport height. Similarly, if the viewport width is smaller than the height, the value of 1vmin will be equal to 1% of the viewport width.
+        4) Viewport Maximum (vmax) - This unit is based on the larger dimension of the viewport. If the viewport height is larger than the width, the value of 1vmax will be equal to 1% of viewport height. Similarly, if the viewport width is larger than the height, the value of 1vmax will be equal to 1% of hte viewport width.
+
+    Problem with viewport units
+        -On small screen sizes, content may spill to other sections essentially blocking other contents.
+
+Day 6:
+    Topics Tackled:
+        1) Using percentage for widths
+        2) Avoiding to set heights
+        3) Using max-widths
+
+        Why you shouldn't use EM?
+        EM's Compounding nature - inheriting and multiplying font size from all of its parents.
+
+Day 7:
+    Block Element Modifier (BEM) naming convention
+        -makes it easier to know where and which something belongs to.
+
+        <div class="card card--light">
+            <img class="card__image" src="url" alt=name>
+            <h2 class="card__title>Text</h2>
+            <p class="card__body>Text</p>
+        </div>
+
+        where:
+        card = Block
+        card__image = Element of the block
+        card--light = Modifier of the block
+
+        so,
+        Double Underscore (__) - used for naming element inside a block, child of the block
+        Double Hyphen (--) - used for naming something that modifies the block
+
+    ---------------------------------------------------------------------------------------------
+
+    *, ::before, ::after {box-sizing: border-box}
+
+    OR
+
+    html {box-sizing: border-box} 
+    *, ::before, ::after {box-sizing: border-box}
+
+        - it make sure that the content, padding and borders fit the specified size of a container.
+        - it includes border size to the inside of container instead of outside.
+        - it makes organizing easier by making sizes predictable.
+
+Day 8:
+    Flexbox
+        - css layout tool
+
+        display: flex; - makes a flex container.
+
+        flex-direction: row; - default, items shown in a row.
+        flex-direction: column; - items shown in a column.
+
+        flex items 
+        - items inside a flex container, shrinks to smallest possible size.
+
+        width: 100%; 
+        - to make sure all items have the same size (ideal size).
+
+    Adding space:
+        gap: amount; 
+        - where amount is the size of your gap, creates gap between flex items.
+
+        .col + .col {margin-left: amount;} 
+        - (combinator) selects and checks for adjacent sibling before it.
+
+Day 9:
+    Reduce HTML markups
+        - place multiple classes in a single div if no conflicts.
+        - have meaningful class name to easily know its effect.
+
+    Adding Image
+        - include alt text
+        - wrap inside a div to avoid getting distorted from parent properties.
+
+    align-self: property; // allows default alignment to be overriden for individual flex items
+    justify-content: property; // defines alignment along the main axis. Distributes leftover space
+        - dictates the layout of flex items in a container.
+
+    Ensure Responsive Image
+        - add max-width: 100%; to .img selector
+        - avoids overflow or side-scrolling in small screen sizes
+
+Day 10:
+    Flexbox Container
+        flex-direction: property;
+            dictates direction of flex items.
+                row - default, flex items go side-by-side along X-axis (left - right)
+                row-reverse - flex items go side-by-side along X-axis (right - left)
+                column - flex items create a stack along Y-axis (top - bottom)
+
+        flex-wrap: property;
+            dictates how flex items will handle overflow.
+                nowrap - default, flex items continue to go side-by-side with no regards to overflow
+                wrap - flex items will go to next line if theres overflow
+
+        flex-flow: property; // shorthand for combined flex-direction and flex-wrap and their properties.
+
+        justify-content: property; (X-axis by default but Y-axis if flex-direction is column)
+            It defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.
+                flex-start (default): items are packed toward the start line
+                flex-end: items are packed toward to end line
+                center - center: items are centered along the line
+                space-between - items are evenly distributed in the line; first item is on the start line, last item on the end line
+                space-around - items are evenly distributed in the line with equal space around them
+                space-evenly - items are distributed so that the spacing between any two adjacent alignment subjects, before the first alignment subject, and after the last alignment subject is the same
+
+        align-items: property; (Y-axis by default but X-axis if flex-direction is column)
+            defines the default behavior for how items are laid out along the cross axis (perpendicular to the main axis).
+                stretch (default) - stretch to fill the container (still respect min-width/max-width)
+                flex-start - cross-start margin edge of the items is placed on the cross-start line
+                flex-end - cross-end margin edge of the items is placed on the cross-end line
+                center - items are centered in the cross-axis
+                baseline - items are aligned such as their baselines align
+
+        align-content: property; 
+            It helps to align a flex container’s lines within it when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
+                stretch (default) - lines stretch to take up the remaining space 
+                flex-start - lines packed to the start of the container
+                flex-end - lines packed to the end of the container
+                center - lines packed to the center of the container
+                space-between - lines evenly distributed; the first line is at the start of the container while the last one is at the end
+                space-around - lines evenly distributed with equal space between them
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Flexbox items
+        flex-grow: number;
+            It defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
+
+        flex-shrink: number;
+            It specifies the “flex shrink factor” which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn’t enough space on the row.
+
+        flex-basis: number; // ideal width like max-width but shrinks if needed
+            It specifies the initial size of the flex item, before any available space is distributed according to the flex factors. When omitted from the flex shorthand, its specified value is the length zero.
+
+        flex: number number number; // shorthand for flex-grow, shrink and basis.
+            It takes flex-grow, flex-shrink and flex-basis respectively.
+
+        align-self: property; // same as align items property but only works on itself. breaks default properties
+
+        order: number;
+            0 - (default) natural place in order
+            -1 - to place ahead of 0
+
+Day 12:
+    Centering Things
+        margin: 0 auto;
+
+Day 13-14:
+    Useful CSS Functions:
+        min();
+            - lets you set the smallest (most negative) value from a list of comma-separated expressions as the value of a CSS property value.
+            - The min() function can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed.
+
+        max();
+            - lets you set the largest (most positive) value from a list of comma-separated expressions as the value of a CSS property value.
+            - The max() function can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed.
+
+        clamp(); 
+            - clamps a value between an upper and lower bound. clamp() enables selecting a middle value within a range of values between a defined minimum and maximum.
+            - It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. The clamp() function can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed.
+            - clamp(MIN, VAL, MAX) is resolved as max()(MIN, min()(VAL, MAX))
+
+        calc();
+            - lets you perform calculations when specifying CSS property values.
+            - It can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed.
+
+    other solution:
+        font-size: calc(1vw + .rem); // scales font size depending on viewport
+
+Day 15:
+    Media Queries
+        - modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser viewport width).
+
+        @media media type(media features) {     // media type can be omitted but can also use logical operator if using more than one feature
+            // code
+        }
+
+        Logical Operators:
+        and
+            - used for combining multiple media features together into a single media query, requiring each chained feature to return true for the query to be true. It is also used for joining media features with media types.
+        not
+            - used to negate a media query, returning true if the query would otherwise return false. If present in a comma-separated list of queries, it will only negate the specific query to which it is applied. If you use the not operator, you must also specify a media type.
+        only
+            - used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. When not using only, older browsers would interpret the query screen and (max-width: 500px) as screen, ignoring the remainder of the query, and applying its styles on all screens. If you use the only operator, you must also specify a media type.
+        (,) comma
+            - used to combine multiple media queries into a single rule. Each query in a comma-separated list is treated separately from the others. Thus, if any of the queries in a list is true, the entire media statement returns true. In other words, lists behave like a logical or operator.
+
+        - Media features describe the specific characteristics of a given user agent, output device, or environment. For instance, you can apply specific styles to widescreen monitors, computers that use mice, or to devices that are being used in low-light conditions.
+        - often used media feature is width:
+            (min-width: 600px) - screen size >= 600px / 600px or bigger
+            (max-width: 600px) - screen size <= 600px / 600px or smaller
+        - media queries should be always be in ascending or descending order depending on the approach used. (mobile or desktop)
+        - often placed at the bottom of css
+
+Day 16:
+    Breakpoints
+    - is the “point” at which a website's content and design will adapt in a certain way in order to provide the best possible user experience.
+
+    When to use breakpoints?
+        - play with dev tools 'responsive mode' and see when your layout breaks. (1-3 breakpoints are enough)
+
+    Common breakpoints:
+        600px - phones
+        900px - tablets
+        1200px - desktops
+        1800px - big monitors
+
+Day 17:
+    Meta Viewport Tag
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            - ensures website to respond the way it suppose to be.
+        width
+            - controls the size of the viewport. It can be set to a specific number of pixels like width=600 or to the special value device-width, which is the width of the screen in CSS pixels at a scale of 100%. (There are corresponding height and device-height values, which may be useful for pages with elements that change size or position based on the viewport height.)
+        initial-scale
+            - controls the zoom level when the page is first loaded. The maximum-scale, minimum-scale, and user-scalable properties control how users are allowed to zoom the page in or out.
