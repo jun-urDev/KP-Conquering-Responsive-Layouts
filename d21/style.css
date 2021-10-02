@@ -53,6 +53,7 @@ li {
   font-weight: 900;
   background-color: var(--biege);
   font-family: var(--head);
+  font-size: 1.2rem;
   padding: 0.6em 1.8em;
   border-radius: 100px;
   margin-top: 0.75rem;
@@ -67,7 +68,7 @@ li {
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
-  padding: 3em;
+  padding: 3em 0;
 }
 
 .column {
@@ -106,7 +107,7 @@ li {
   color: var(--white);
   transition: opacity 250ms ease;
   position: absolute;
-  left: 0;
+  left: 10px;
 }
 
 .nav-toggle:focus,
@@ -187,33 +188,44 @@ li {
 .hero {
   background-color: var(--dark);
   color: var(--white);
+  padding: 3rem 0;
 }
 
 .hero-title {
   font-size: 3rem;
   margin: 0;
+  line-height: 1.2;
 }
 
 .title-em {
   color: var(--biege);
-  display: block;
 }
 
-.hero p {
+.hero-p {
   padding: 0.8rem 0;
+  font-size: 1.2rem;
 }
 
 .title {
   margin-bottom: 0.75rem;
   text-align: center;
+  font-size: 1.3rem;
 }
 
 .section1 {
   background-color: var(--dirtywhite);
 }
 
+.des-box {
+  text-align: center;
+}
+
 .section2 {
   background-color: var(--white);
+}
+
+.ux-img {
+  margin: 2rem 0;
 }
 
 .box {
@@ -227,10 +239,86 @@ li {
   color: var(--white);
 }
 
-.footer ul {
-  display: flex;
-  justify-content: space-evenly;
+.footer-title {
+  font-size: 2rem;
+  margin: 0;
+  padding: 2rem 0 0;
+}
+
+.footer-list {
+  display: inline;
+}
+
+li + li {
+  margin-left: 1rem;
 }
 
 /* media queries */
-/* max-width 600 */
+@media (min-width: 775px) {
+  .box {
+    padding: 2rem 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 3.4rem;
+  }
+
+  .section2 {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .column {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .hero__text {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero-title {
+    flex-basis: 50%;
+    padding-right: 3rem;
+    font-size: 3.8rem;
+  }
+
+  .hero__subtext {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    width: max-content;
+  }
+
+  .des-box {
+    gap: 2rem;
+  }
+
+  .section2 {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    flex-direction: column;
+  }
+
+  .company {
+    text-align: start;
+  }
+
+  .footer-div + .footer-div {
+    margin-left: 0.5rem;
+  }
+}
