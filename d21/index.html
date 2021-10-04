@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header max">
       <button class="nav-toggle" aria-label="open navigation">
         <span class="hamburger"></span>
       </button>
@@ -36,15 +36,15 @@
       </nav>
     </header>
 
-    <section class="hero column">
+    <section class="hero max">
       <div class="container">
-        <div class="hero__text">
-          <h1 class="hero-title">
+        <div class="hero__text row">
+          <h1 class="hero__title title">
             Responsive layouts
-            <span class="title-em">don’t have to be a struggle</span>
+            <span>don’t have to be a struggle</span>
           </h1>
           <div class="hero__subtext">
-            <p class="hero-p">
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -54,11 +54,13 @@
       </div>
     </section>
 
-    <main>
+    <main class="max">
       <section class="section1">
-        <div class="container column">
-          <div class="des-box">
-            <h2 class="section-title title">Mobile-first</h2>
+        <div class="container row">
+          <div class="des-box description">
+            <h2 class="section__title section__title--biege title">
+              Mobile-first
+            </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -66,8 +68,10 @@
             </p>
           </div>
 
-          <div class="des-box">
-            <h2 class="section-title title">Efficient</h2>
+          <div class="des-box description">
+            <h2 class="section__title section__title--biege title">
+              Efficient
+            </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -75,8 +79,10 @@
             </p>
           </div>
 
-          <div class="des-box">
-            <h2 class="section-title title">Done right</h2>
+          <div class="des-box description">
+            <h2 class="section__title section__title--biege title">
+              Done right
+            </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -86,9 +92,11 @@
         </div>
       </section>
 
-      <section class="section2 container column">
+      <section class="section2 container">
         <div class="content">
-          <h2 class="section-title title">It doesn't have to be so hard</h2>
+          <h2 class="section__title section__title--biege title">
+            It doesn't have to be so hard
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -97,11 +105,14 @@
             aliqua. Ut enim ad minim veniam.
           </p>
 
-          <img
-            src="img/the-image.jpg"
-            alt="UX design sketches"
-            class="ux-img"
-          />
+          <div class="content-img">
+            <img
+              src="img/the-image.jpg"
+              alt="UX design sketches"
+              class="ux-img"
+            />
+          </div>
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -111,25 +122,31 @@
           </p>
         </div>
 
-        <aside class="sidebar column">
-          <div class="box des-box">
-            <h2 class="sidebar-title title">Break it down</h2>
+        <aside class="sidebar">
+          <div class="sidebar__box des-box box">
+            <h2 class="section__title section__title--white title">
+              Break it down
+            </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
 
-          <div class="box des-box">
-            <h2 class="sidebar-title title">Work your way up</h2>
+          <div class="sidebar__box des-box box">
+            <h2 class="section__title section__title--white title">
+              Work your way up
+            </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
 
-          <div class="box des-box">
-            <h2 class="sidebar-title title">Break it down</h2>
+          <div class="sidebar__box des-box box">
+            <h2 class="section__title section__title--white title">
+              Break it down
+            </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -139,45 +156,55 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <h2 class="footer-title title">just scratching the surface</h2>
-      <div class="container column">
-        <div class="company-div">
-          <h3 class="company section-title title">About our company</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
-          </p>
-        </div>
+    <footer class="footer max">
+      <h2 class="footer__title section__title section__title--white">
+        just scratching the surface
+      </h2>
+      <div class="container">
+        <div class="row footer__details--row">
+          <div class="footer__details footer__details--main">
+            <h3 class="section__title section__title--biege title">
+              About our company
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
+          </div>
 
-        <div class="footer-div des-box">
-          <h3 class="section-title title">Getting around</h3>
-          <ul>
-            <li class="footer-list">Home</li>
-            <li class="footer-list">About</li>
-            <li class="footer-list">Contact</li>
-          </ul>
-        </div>
+          <div class="footer__details footer__details--links">
+            <h3 class="section__title section__title--biege title">
+              Getting around
+            </h3>
+            <ul class="footers">
+              <li class="footer-links">Home</li>
+              <li class="footer-links">About</li>
+              <li class="footer-links">Contact</li>
+            </ul>
+          </div>
 
-        <div class="footer-div des-box">
-          <h3 class="section-title title">Other things</h3>
-          <ul>
-            <li class="footer-list">Lorem ipsum</li>
-            <li class="footer-list">dolor</li>
-            <li class="footer-list">sit amet</li>
-            <li class="footer-list">consectetur</li>
-          </ul>
-        </div>
+          <div class="footer__details footer__details--links">
+            <h3 class="section__title section__title--biege title">
+              Other things
+            </h3>
+            <ul class="footers">
+              <li class="footer-links">Lorem ipsum</li>
+              <li class="footer-links">dolor</li>
+              <li class="footer-links">sit amet</li>
+              <li class="footer-links">consectetur</li>
+            </ul>
+          </div>
 
-        <div class="footer-div des-box">
-          <h3 class="section-title title">And more</h3>
-          <ul>
-            <li class="footer-list">Lorem ipsum</li>
-            <li class="footer-list">dolor</li>
-            <li class="footer-list">sit amet</li>
-            <li class="footer-list">consectetur</li>
-          </ul>
+          <div class="footer__details footer__details--links">
+            <h3 class="section__title section__title--biege title">And more</h3>
+            <ul class="footers">
+              <li class="footer-links">Lorem ipsum</li>
+              <li class="footer-links">dolor</li>
+              <li class="footer-links">sit amet</li>
+              <li class="footer-links">consectetur</li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
